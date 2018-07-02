@@ -5,7 +5,7 @@ var comChoice;
 var comChoice = ["ROCK","PAPER","SCISSORS"];
 alert("<Welcome To The Rock Paper Scissors Game>");
 
-while (playerScore !== 3 || computerScore !== 3)
+while (playerScore !== 3 || comScore !== 3)
 {
 choice = prompt("What would you like pick: (1)-Rock (2)-Paper (3)-Scissors");
 
@@ -36,7 +36,15 @@ gamePlay(pChoice, cChoice);
 function gamePlay(pChoice, cChoice)
 {
 
-if (pChoice == "ROCK" && cChoice == "SCISSORS")
+  if (pChoice === cChoice)
+  {
+  alert("<RockPaperScissors> Player AND Computer Has DRAW");
+  alert("<RockPaperScissors> Player has Selected " + pChoice + " | Computer has Selected " + cChoice + " - Player Score: " + playerScore + " | Computer Score " + comScore);
+  pChoice = "";
+  cChoice = "";
+  }
+
+else if (pChoice == "ROCK" && cChoice == "SCISSORS")
 {
   playerScore++;
   alert("<RockPaperScissors> Player Beats Computer");
@@ -90,16 +98,8 @@ else if (pChoice == "PAPER" && cChoice == "ROCK")
   pChoice = "";
   cChoice = "";
 }
-else
-
-pChoice === cChoice;
-
-alert("<RockPaperScissors> Player AND Computer Has DRAW");
-alert("<RockPaperScissors> Player has Selected " + pChoice + " | Computer has Selected " + cChoice + " - Player Score: " + playerScore + " | Computer Score " + comScore);
-pChoice = "";
-cChoice = "";
+else {}
 }
-
 
 }
 
