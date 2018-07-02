@@ -5,7 +5,7 @@ alert("<Welcome To The Rock Paper Scissors Game>");
 
 while (playerScore !== 3 || computerScore !== 3)
 {
-choice = prompt("What would you like pick: (1)-Rock (2)-Paper (3)-Scissors")
+choice = prompt("What would you like pick: (1)-Rock (2)-Paper (3)-Scissors");
 
 switch (choice)
 {
