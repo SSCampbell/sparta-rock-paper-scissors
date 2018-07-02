@@ -1,12 +1,12 @@
 var playerScore = 0;
 var comScore = 0;
 var pChoice;
-var comChoice;
 var comChoice = ["ROCK","PAPER","SCISSORS"];
 alert("<Welcome To The Rock Paper Scissors Game>");
 
-while (playerScore !== 3 || comScore !== 3)
+while (playerScore < 3 && comScore < 3)
 {
+
 choice = prompt("What would you like pick: (1)-Rock (2)-Paper (3)-Scissors");
 
 switch (choice)
@@ -24,8 +24,8 @@ switch (choice)
     break;
 
   default:
-
-alert("<ERROR> Please Enter Correct Value");
+  alert("<ERROR> Please Enter Correct Value");
+  choice = "";
 }
 
 var rand = comChoice[Math.floor(Math.random() * comChoice.length)];
@@ -44,7 +44,7 @@ function gamePlay(pChoice, cChoice)
   cChoice = "";
   }
 
-else if (pChoice == "ROCK" && cChoice == "SCISSORS")
+else if (pChoice === "ROCK" && cChoice === "SCISSORS")
 {
   playerScore++;
   alert("<RockPaperScissors> Player Beats Computer");
@@ -54,7 +54,7 @@ else if (pChoice == "ROCK" && cChoice == "SCISSORS")
 
 }
 
-else if (pChoice == "ROCK" && cChoice == "PAPER")
+else if (pChoice === "ROCK" && cChoice === "PAPER")
 {
   comScore++;
   alert("<RockPaperScissors> Computer Beats Player");
@@ -63,7 +63,7 @@ else if (pChoice == "ROCK" && cChoice == "PAPER")
   cChoice = "";
 }
 
-else if (pChoice == "PAPER" && cChoice == "SCISSORS")
+else if (pChoice === "PAPER" && cChoice === "SCISSORS")
 {
   comScore++;
   alert("<RockPaperScissors> Computer Beats Player");
@@ -72,7 +72,7 @@ else if (pChoice == "PAPER" && cChoice == "SCISSORS")
   cChoice = "";
 }
 
-else if (pChoice == "SCISSORS" && cChoice == "PAPER")
+else if (pChoice === "SCISSORS" && cChoice === "PAPER")
 {
   playerScore++;
   alert("<RockPaperScissors> Player Beats Computer");
@@ -81,7 +81,7 @@ else if (pChoice == "SCISSORS" && cChoice == "PAPER")
   cChoice = "";
 }
 
-else if (pChoice == "SCISSORS" && cChoice == "ROCK")
+else if (pChoice === "SCISSORS" && cChoice === "ROCK")
 {
   comScore++;
   alert("<RockPaperScissors> Computer Beats Player");
@@ -90,7 +90,7 @@ else if (pChoice == "SCISSORS" && cChoice == "ROCK")
   cChoice = "";
 }
 
-else if (pChoice == "PAPER" && cChoice == "ROCK")
+else if (pChoice === "PAPER" && cChoice === "ROCK")
 {
   playerScore++;
   alert("<RockPaperScissors> Player Beats Computer");
@@ -98,7 +98,8 @@ else if (pChoice == "PAPER" && cChoice == "ROCK")
   pChoice = "";
   cChoice = "";
 }
-else {}
+else
+{}
 }
 
 }
@@ -106,6 +107,7 @@ else {}
 if (playerScore == 3)
 {
   alert("Player Has Won The Game");
+
 }
 
 else if (comScore == 3)
